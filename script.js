@@ -1,16 +1,24 @@
-function appendValue(value){
-    document.getElementById("display").value += value;
-}
+class Calculator {
+    constructor() {
+        this.display = document.getElementById("display");
+    }
 
-function clearDisplay(){
-    document.getElementById("display").value = "";
-}
+    appendValue(value) {
+        this.display.value += value;
+    }
 
-function calculate(){
-    const display = document.getElementById("display");
-    try{
-        display.value = eval(display.value);
-    }catch{
-        display.value = "Error";
+    clearDisplay() {
+        this.display.value = "";
+    }
+
+    calculate() {
+        try {
+            this.display.value = eval(this.display.value);
+        } catch {
+            this.display.value = "Error";
+        }
     }
 }
+
+// Create an instance of the Calculator class
+const calculator = new Calculator();
