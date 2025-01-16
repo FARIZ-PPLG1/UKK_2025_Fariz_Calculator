@@ -3,13 +3,13 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .calculator{
     width: 250px;
-    background-color: gray;
+    background-color: rgb(87, 89, 96);
     border-radius: 8px;
     box-shadow: 0 0 10px(rgb(0,0,0,1));
     padding: 20px;
@@ -51,16 +51,16 @@ body{
 }
 
 .operator:active{
-    background-color: #e53935;
+    background-color: darkorange;
 }
 
 .clear{
     grid-column: span 4;
-    background-color: #e53935;
+    background-color: #2d0e9c;
     color: white;
     width: 100%;
 }
 
 .clear:active{
-    background-color: #c62828;
+    background-color: #1c007a;
 }
