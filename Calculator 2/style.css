@@ -1,62 +1,70 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
 body{
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.7) url("https://cdn.pixabay.com/photo/2020/12/24/13/42/math-images-5857406_960_720.jpg");
+    height: 100vh;
+    background: rgba(0,0,0,0.7) url("https://cdn.pixabay.com/photo/2023/03/16/18/06/background-7857280_1280.jpg");
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .calculator{
-    border: 1px solid #717377;
+    width: 250px;
+    background-color: rgb(135, 135, 135);
+    border-radius: 8px;
+    box-shadow: 0 0 10px(rgb(0,0,0,1));
     padding: 20px;
-    border-radius: 16px;
-    background: #0d103e;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+.input{
+    background-color: rgb(81, 80, 80);
+    color: white;
 }
 
-input{
-    width: 320px;
-    border: none;
-    padding: 24px;
-    margin: 10px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
-    font-size: 40px;
+#display{
+    width: 230px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 24px;
     text-align: right;
-    cursor: pointer;
-    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-input::placeholder {
-    color: #ffffff;
+.button{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
 }
 
-button{
+.btn{
+    padding: 15px;
+    margin-right: 2px;
+    margin-bottom: 5px;
     border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-    background: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: #f0f0f0;
     cursor: pointer;
 }
 
-.equalBtn {
-    background-color: #fbc531;
+.btn:active{
+    background-color: #ddd;
 }
 
 .operator{
-    color: #fbc531;
+    background-color: #f9a825;
+}
+
+.operator:active{
+    background-color: darkorange;
+}
+
+.clear{
+    grid-column: span 4;
+    background-color: #350dc4;
+    color: white;
+    width: 100%;
+}
+
+.clear:active{
+    background-color: #1c007a;
 }
