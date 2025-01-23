@@ -25,6 +25,8 @@ class Calculator {
             this.appendToInput("/");
         } else if (value === "x") {
             this.appendToInput("*");
+        } else if (value === "%") {
+            this.appendToInput(value); // Append % as a string
         } else {
             this.appendToInput(value);
         }
@@ -32,7 +34,11 @@ class Calculator {
 
     evaluateExpression() {
         try {
-            this.string = eval(this.string);
+            // Replace percentage strings with their decimal equivalents
+            const modifiedString = this.string.replace(/(\d+)%/g, (match, p1) => {
+                return `(${p1} / 100)`; // Convert percentage to decimal
+            });
+            this.string = eval(modifiedString);
             this.input.value = this.string;
         } catch (error) {
             this.input.value = "Error";
