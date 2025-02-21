@@ -34,7 +34,7 @@ class Calculator {
 
     evaluateExpression() {
         try {
-            // Ganti string persentase dengan padanan desimalnya
+            // Mengganti string persentase dengan ekuivalen desimalnya
             const modifiedString = this.string.replace(/(\d+)%/g, (match, p1) => {
                 return `(${p1} / 100)`; // Ubah persentase menjadi desimal
             });
