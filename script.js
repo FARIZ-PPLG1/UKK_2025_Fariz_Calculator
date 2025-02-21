@@ -26,7 +26,7 @@ class Calculator {
         } else if (value === "x") {
             this.appendToInput("*");
         } else if (value === "%") {
-            this.appendToInput(value); // Append % as a string
+            this.appendToInput(value); // Tambahkan %(persen) sebagai string
         } else {
             this.appendToInput(value);
         }
@@ -34,15 +34,15 @@ class Calculator {
 
     evaluateExpression() {
         try {
-            // Replace percentage strings with their decimal equivalents
+            // Ganti string persentase dengan padanan desimalnya
             const modifiedString = this.string.replace(/(\d+)%/g, (match, p1) => {
-                return `(${p1} / 100)`; // Convert percentage to decimal
+                return `(${p1} / 100)`; // Ubah persentase menjadi desimal
             });
             this.string = eval(modifiedString);
             this.input.value = this.string;
         } catch (error) {
             this.input.value = "Error";
-            this.string = ""; // Reset string on error
+            this.string = ""; // Setel ulang string jika terjadi kesalahan
         }
     }
 
@@ -62,7 +62,7 @@ class Calculator {
     }
 }
 
-// Usage
+// Penggunaan
 let input = document.getElementById("inputBox");
 let buttons = document.querySelectorAll("button");
 let calculator = new Calculator(input, buttons);
